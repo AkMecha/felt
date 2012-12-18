@@ -52,6 +52,7 @@ void axisymmetricInit()
     int dofsarr[] = {0,1,2,0,0,0,0};
     for (int i=0; i<7; i++)
     dd->dofs[i] = dofsarr[i];
+    //dd->dofs = {0, 1, 2, 0, 0, 0, 0};
     dd->retainK = 0;
     AddDefinition(dd);
 }
