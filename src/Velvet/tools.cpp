@@ -37,6 +37,7 @@
 # include "text_entry.h"
 # include "allocate.h"
 # include "globals.h"
+#include <stdint.h>
 
 
 static unsigned op_count;
@@ -47,7 +48,7 @@ FigureSet figure_set;
 
 int figure_cmp (Item item1, Item item2)
 {
-    return ((int) item1) - ((int) item2);
+    return ((intptr_t) item1) - ((intptr_t) item2);
 }
 
 
