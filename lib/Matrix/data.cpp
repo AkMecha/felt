@@ -51,41 +51,6 @@ double mdata (const Matrix &A, unsigned int row, unsigned int col)
    return 0;
 }
 
-Matrix CreateSubsectionMatrix (const Matrix &a, unsigned int sr, unsigned int sc, unsigned int er, unsigned int ec)
-{
-   unsigned	i;
-   Matrix	root;
-
-   if (er > a -> nrows || ec > a -> ncols || sc < 1 || sr < 1)
-       return Matrix();
-
-   if (IsCompact (a))
-       return Matrix();
-
-   Matrix b(new struct matrix);
-   
-   b -> nrows = er - sr + 1;
-   b -> ncols = ec - sc + 1;
-
-   b -> data = (double **) malloc (sizeof (double *) * b -> nrows);
-   if (b -> data == NULL)
-	Fatal ("unable to allocate subsection matrix");
-   b -> data --;
-
-   for (i = 1 ; i <= b -> nrows ; i++)
-      b -> data [i] = &(a -> data [i + sr - 1][sc - 1]); 
-
-   b -> size = 0;
-
-   root = a;
-   while (root -> parent)
-      root = root -> parent;
-
-   b -> parent = root;
-
-   return b;
-}
-
 Matrix CreateFullMatrix (unsigned int rows, unsigned int cols)
 {
    unsigned	i;
@@ -113,7 +78,6 @@ Matrix CreateFullMatrix (unsigned int rows, unsigned int cols)
    m -> nrows = rows;
    m -> ncols = cols;
    m -> size = 0;
-   m -> parent.reset();
 
    return m;
 }
@@ -146,7 +110,6 @@ Matrix CreateCompactMatrix (unsigned int rows, unsigned int cols, unsigned int s
    A -> nrows = rows; 
    A -> ncols = cols;
    A -> size = size;
-   A -> parent.reset();
 
    if (diag != NULL)
        A->diag = *diag;

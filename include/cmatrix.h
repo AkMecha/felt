@@ -39,7 +39,6 @@ struct complex_matrix {
    complex	**data;		/* matrix data				 */
    cvector1<unsigned> diag;		/* diagonal addresses for compact column */
    unsigned	size;		/* actual size of compact storage	 */
-   ComplexMatrix parent;	/* parent of possible subsection	 */
 private:
      complex_matrix& operator=(const complex_matrix &rhs);
      complex_matrix(const complex_matrix &am);
