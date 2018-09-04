@@ -44,10 +44,15 @@ To clone this repository run :
 Then run these commands one by one :
 
 ```` cd felt ````
-```` mkdir build `````
-```` cd build `````
-```` cmake .. `````
-```` make `````
-```` make install `````
+
+```` mkdir build ````
+
+```` cd build ````
+
+```` cmake .. ````
+
+```` make ````
+
+```` make install ````
 
 This will install FElt in your system.
