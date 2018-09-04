@@ -23,3 +23,31 @@ targets are completed:
 
 I also plan to sync with upstream, whenever a new version of FElt is released.
 
+Pre-requisites :
+
+1. Git
+1. GCC 7.3.0
+1. Flex
+1. Bison
+1. Boost 1.40.0
+1. CMake
+1. Make
+
+To install all the pre-requisites, run the following command :
+
+```` sudo apt-get install build-essential make gcc flex cmake bison boost git-core ````
+
+To clone this repository run :
+
+```` git clone https://github.com/AkMecha/felt.git felt ````
+
+Then run these commands one by one :
+
+```` cd felt ````
+```` mkdir build `````
+```` cd build `````
+```` cmake .. `````
+```` make `````
+```` make install `````
+
+This will install FElt in your system.
