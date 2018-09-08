@@ -34,6 +34,8 @@ extern "C" {
 #include "transient.hpp"
 #include "renumber.hpp"
 #include "fe.hpp"
+#include<readline/readline.h>
+#include<readline/history.h>
 
 //----------------------------------------------------------------------!
 
