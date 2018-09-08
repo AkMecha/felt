@@ -17,6 +17,8 @@
 #include <map>
 #include <utility>
 #include <boost/shared_ptr.hpp>
+#include<readline/readline.h>
+#include<readline/history.h>
 
 #ifdef SHOWNEWDELETE
 #include <cstdio>
