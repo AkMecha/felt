@@ -8,6 +8,8 @@ set(felt_VERSION_MICRO 1)
 set(X11DEF_DIR "/etc/X11/app-defaults" CACHE PATH "install directory for X11 resource files.")
 configure_file(include/config.h.in include/config.h)
 
+set(CMAKE_C_COMPILER_VERSION 7.3.0)
+
 find_program(CPP_LOCATION cpp)
 if(NOT CPP_LOCATION)
   message(FATAL_ERROR "cpp executable not found, required.")
@@ -18,7 +20,6 @@ find_package(BISON REQUIRED)
 find_package(Boost 1.40.0)
 include_directories(${Boost_INCLUDE_DIRS})
 find_package(Lua51 REQUIRED)
-find_package(gcc 7.3.0 REQUIRED)
 
 include_directories(include)
 add_subdirectory(lib)
