@@ -8,7 +8,7 @@ set(felt_VERSION_MICRO 1)
 set(X11DEF_DIR "/etc/X11/app-defaults" CACHE PATH "install directory for X11 resource files.")
 configure_file(include/config.h.in include/config.h)
 
-set(CMAKE_C_COMPILER_VERSION 7.3.0)
+set (CMAKE_CXX_STANDARD 11)
 
 find_program(CPP_LOCATION cpp)
 if(NOT CPP_LOCATION)
