@@ -154,9 +154,9 @@ static void SetupFont (String fname, XFontStruct *fstruct)
       if (!XGetFontProperty (fstruct, XA_ITALIC_ANGLE, &italic))
          italic = 5760;
 
-      if (abs(italic) != 5760 && weight > 300)
+      if (abs((float)italic) != 5760 && weight > 300)
          number = 7;
-      else if (abs(italic) != 5760)
+      else if (abs((float)italic) != 5760)
          number = 6;
       else if (weight > 500) 
          number = 5;
