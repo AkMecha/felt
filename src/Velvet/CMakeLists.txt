@@ -1,3 +1,5 @@
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-narrowing" )
+
 add_executable(velvet
   analysis.cpp animate.cpp apply.cpp callbacks.cpp canvas.cpp
   colors.cpp constraint.cpp contour.cpp draw3d.cpp drawingshell.cpp
