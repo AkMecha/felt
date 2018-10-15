@@ -35,7 +35,7 @@ Pre-requisites :
 
 To install all the pre-requisites, run the following command :
 
-sudo apt-get install build-essential make gcc flex cmake bison boost git-core
+`sudo apt-get install build-essential make gcc flex cmake bison boost git-core`
 
 To clone this repository run :
 
