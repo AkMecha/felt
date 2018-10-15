@@ -43,7 +43,7 @@ git clone https://github.com/Sudhanshu-Dubey14/felt.git
 
 Then run these commands one by one :
 
-cd felt
+````cd felt
 
 mkdir build
 
@@ -53,6 +53,6 @@ cmake ..
 
 make
 
-make install
+make install ````
 
 This will install FElt in your system.
