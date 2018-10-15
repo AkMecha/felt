@@ -39,7 +39,7 @@ To install all the pre-requisites, run the following command :
 
 To clone this repository run :
 
-git clone https://github.com/Sudhanshu-Dubey14/felt.git 
+`git clone https://github.com/Sudhanshu-Dubey14/felt.git `
 
 Then run these commands one by one :
 
